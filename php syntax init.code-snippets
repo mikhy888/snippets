@@ -1,0 +1,51 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+ 
+	// Example:
+	"PHP syntax init": {
+		"scope": "php, html, javascript, css",
+		"prefix": "php",
+		"body": [
+			"<?php $1 ?>"
+		],
+		"description": "Getting the php init syntax"
+	},
+	"Reapeater ACF": {
+		"scope": "php, html, javascript, css",
+		"prefix": "repeater",
+		"body": [
+			"<?php",
+			"if( have_rows($1) ):",
+			"while( have_rows($2) ) : the_row();",
+				"?>",
+				"$3",
+				"<?php",
+				"endwhile;",
+				"else :",
+			"endif;",
+			"?>"
+		],
+		"description": "ACF repeater field generation"
+	},
+	"normal field call": {
+		"scope": "php, html, javascript, css",
+		"prefix": "the",
+		"body": [
+			"<?php the_field('$1') ?>"
+		],
+		"description": "ACF normal field call"
+	},
+	"sub field call": {
+		"scope": "php, html, javascript, css",
+		"prefix": "sub",
+		"body": [
+			"<?php the_sub_field('$1') ?>"
+		],
+		"description": "ACF sub field call"
+	},
+}
